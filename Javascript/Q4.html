@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form</title>
+  </head>
+  <body>
+    <h1>Form Validations</h1>
+
+    <form onsubmit="return validate();">
+      <input id="uname" type="text" placeholder="Enter Your Name" />
+      <label id="lab" style="color: red; visibility: hidden;">Invalid</label>
+
+      <br /><br />
+
+      <input id="pass" type="check" placeholder="Please check" />
+      <label id="bal" style="color: red; visibility: hidden;">Invalid</label>
+
+      <br /><br />
+
+      <button type="submit">Submit</button>
+    </form>
+  </body>
+</html>
+
+
+<script>
+    function validate(){
+        var a = document.getElementById("uname");
+        var b = document.getElementById("pass");
+
+        if(a.value.trim() == ""){
+            // alert("Blank username");
+            a.style.border = "solid 3px red";
+            document.getElementById("lab").style.visibility = "visible";
+            return false;
+        }
+        else if(b.value.trim() == ""){
+            b.style.border = "solid 3px red";
+            document.getElementById("bal").style.visibility = "visible";
+            return false;
+        }
+        else{
+            return true;
+        }
+    }
+</script>

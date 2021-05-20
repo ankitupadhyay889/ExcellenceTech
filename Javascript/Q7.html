@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1> Call Api with Ajax </h1>
+    <button id="btn"> Fetch </button>
+</body>
+</html>
+
+<script>
+    let ank = document.getElementById("btn");
+    ank.addEventListener('click' , data);
+
+    function data() {
+        const res = new XMLHttpRequest();
+        res.open("GET" , "http://www.example.com/api/get/1" , true);
+        var dataw = res;
+        console.log(dataw);
+    }
+    data();
+</script>
